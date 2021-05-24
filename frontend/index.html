@@ -5,6 +5,387 @@
   <title>Where's DIALOG?</title>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
   <style type="text/css">
+    /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+    /* Document
+   ========================================================================== */
+
+    /**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+    html {
+      line-height: 1.15;
+      /* 1 */
+      -webkit-text-size-adjust: 100%;
+      /* 2 */
+    }
+
+    /* Sections
+     ========================================================================== */
+
+    /**
+   * Remove the margin in all browsers.
+   */
+
+    body {
+      margin: 0;
+    }
+
+    /**
+   * Render the `main` element consistently in IE.
+   */
+
+    main {
+      display: block;
+    }
+
+    /**
+   * Correct the font size and margin on `h1` elements within `section` and
+   * `article` contexts in Chrome, Firefox, and Safari.
+   */
+
+    h1 {
+      font-size: 2em;
+      margin: 0.67em 0;
+    }
+
+    /* Grouping content
+     ========================================================================== */
+
+    /**
+   * 1. Add the correct box sizing in Firefox.
+   * 2. Show the overflow in Edge and IE.
+   */
+
+    hr {
+      box-sizing: content-box;
+      /* 1 */
+      height: 0;
+      /* 1 */
+      overflow: visible;
+      /* 2 */
+    }
+
+    /**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+
+    pre {
+      font-family: monospace, monospace;
+      /* 1 */
+      font-size: 1em;
+      /* 2 */
+    }
+
+    /* Text-level semantics
+     ========================================================================== */
+
+    /**
+   * Remove the gray background on active links in IE 10.
+   */
+
+    a {
+      background-color: transparent;
+    }
+
+    /**
+   * 1. Remove the bottom border in Chrome 57-
+   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+   */
+
+    abbr[title] {
+      border-bottom: none;
+      /* 1 */
+      text-decoration: underline;
+      /* 2 */
+      text-decoration: underline dotted;
+      /* 2 */
+    }
+
+    /**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+
+    b,
+    strong {
+      font-weight: bolder;
+    }
+
+    /**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+
+    code,
+    kbd,
+    samp {
+      font-family: monospace, monospace;
+      /* 1 */
+      font-size: 1em;
+      /* 2 */
+    }
+
+    /**
+   * Add the correct font size in all browsers.
+   */
+
+    small {
+      font-size: 80%;
+    }
+
+    /**
+   * Prevent `sub` and `sup` elements from affecting the line height in
+   * all browsers.
+   */
+
+    sub,
+    sup {
+      font-size: 75%;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline;
+    }
+
+    sub {
+      bottom: -0.25em;
+    }
+
+    sup {
+      top: -0.5em;
+    }
+
+    /* Embedded content
+     ========================================================================== */
+
+    /**
+   * Remove the border on images inside links in IE 10.
+   */
+
+    img {
+      border-style: none;
+    }
+
+    /* Forms
+     ========================================================================== */
+
+    /**
+   * 1. Change the font styles in all browsers.
+   * 2. Remove the margin in Firefox and Safari.
+   */
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      font-family: inherit;
+      /* 1 */
+      font-size: 100%;
+      /* 1 */
+      line-height: 1.15;
+      /* 1 */
+      margin: 0;
+      /* 2 */
+    }
+
+    /**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+
+    button,
+    input {
+      /* 1 */
+      overflow: visible;
+    }
+
+    /**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+
+    button,
+    select {
+      /* 1 */
+      text-transform: none;
+    }
+
+    /**
+   * Correct the inability to style clickable types in iOS and Safari.
+   */
+
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
+      -webkit-appearance: button;
+    }
+
+    /**
+   * Remove the inner border and padding in Firefox.
+   */
+
+    button::-moz-focus-inner,
+    [type="button"]::-moz-focus-inner,
+    [type="reset"]::-moz-focus-inner,
+    [type="submit"]::-moz-focus-inner {
+      border-style: none;
+      padding: 0;
+    }
+
+    /**
+   * Restore the focus styles unset by the previous rule.
+   */
+
+    button:-moz-focusring,
+    [type="button"]:-moz-focusring,
+    [type="reset"]:-moz-focusring,
+    [type="submit"]:-moz-focusring {
+      outline: 1px dotted ButtonText;
+    }
+
+    /**
+   * Correct the padding in Firefox.
+   */
+
+    fieldset {
+      padding: 0.35em 0.75em 0.625em;
+    }
+
+    /**
+   * 1. Correct the text wrapping in Edge and IE.
+   * 2. Correct the color inheritance from `fieldset` elements in IE.
+   * 3. Remove the padding so developers are not caught out when they zero out
+   *    `fieldset` elements in all browsers.
+   */
+
+    legend {
+      box-sizing: border-box;
+      /* 1 */
+      color: inherit;
+      /* 2 */
+      display: table;
+      /* 1 */
+      max-width: 100%;
+      /* 1 */
+      padding: 0;
+      /* 3 */
+      white-space: normal;
+      /* 1 */
+    }
+
+    /**
+   * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+   */
+
+    progress {
+      vertical-align: baseline;
+    }
+
+    /**
+   * Remove the default vertical scrollbar in IE 10+.
+   */
+
+    textarea {
+      overflow: auto;
+    }
+
+    /**
+   * 1. Add the correct box sizing in IE 10.
+   * 2. Remove the padding in IE 10.
+   */
+
+    [type="checkbox"],
+    [type="radio"] {
+      box-sizing: border-box;
+      /* 1 */
+      padding: 0;
+      /* 2 */
+    }
+
+    /**
+   * Correct the cursor style of increment and decrement buttons in Chrome.
+   */
+
+    [type="number"]::-webkit-inner-spin-button,
+    [type="number"]::-webkit-outer-spin-button {
+      height: auto;
+    }
+
+    /**
+   * 1. Correct the odd appearance in Chrome and Safari.
+   * 2. Correct the outline style in Safari.
+   */
+
+    [type="search"] {
+      -webkit-appearance: textfield;
+      /* 1 */
+      outline-offset: -2px;
+      /* 2 */
+    }
+
+    /**
+   * Remove the inner padding in Chrome and Safari on macOS.
+   */
+
+    [type="search"]::-webkit-search-decoration {
+      -webkit-appearance: none;
+    }
+
+    /**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+
+    ::-webkit-file-upload-button {
+      -webkit-appearance: button;
+      /* 1 */
+      font: inherit;
+      /* 2 */
+    }
+
+    /* Interactive
+     ========================================================================== */
+
+    /*
+   * Add the correct display in Edge, IE 10+, and Firefox.
+   */
+
+    details {
+      display: block;
+    }
+
+    /*
+   * Add the correct display in all browsers.
+   */
+
+    summary {
+      display: list-item;
+    }
+
+    /* Misc
+     ========================================================================== */
+
+    /**
+   * Add the correct display in IE 10+.
+   */
+
+    template {
+      display: none;
+    }
+
+    /**
+   * Add the correct display in IE 10.
+   */
+
+    [hidden] {
+      display: none;
+    }
+  </style>
+  <style type="text/css">
     html,
     body {
       height: 100%;
@@ -15,6 +396,9 @@
     button {
       width: 100px;
       height: 25px;
+    }
+
+    #guessButton {
       color: white;
       background-color: red;
     }
@@ -31,16 +415,21 @@
       z-index: 1;
     }
 
-    #street-view-cover{
+    #game-over-screen {
       position: absolute;
       top: 0px;
       left: 0px;
       width: 100%;
       height: 100%;
-      z-index: 10;
-      background-color: rgba(255, 255, 255, 255);
+      z-index: 100;
+      background-color: rgba(255, 255, 255, 0.932);
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: "Roboto", "sans-serif";
+      line-height: 30px;
     }
-
 
     #floating-panel {
       position: absolute;
@@ -66,62 +455,94 @@
   </style>
   <script>
     // Set the starting score of the player to 0
-    let score = 0
 
-    let panorama
+    let panorama;
 
     // Set different places where the player will be spawned
-    var places = [
-      [{ lat: 43.6439659, lng: -79.3886512 }, { country: 'Toronto' }],
-      [{ lat: 53.5430521, lng: -113.4992412 }, { country: 'Edmonton' }],
-      [{ lat: 49.2839272, lng: -123.0911471 }, { country: 'Vancouver' }],
-      [{ lat: 51.0428081, lng: -114.0608079 }, { country: 'Calgary' }],
-      [{ lat: 37.7948838, lng: -122.4015225 }, { country: 'San Francisco' }],
-    ]
+    const officeLevels = [
+      { city: 'Toronto', projectNames: { 'DIALOG Toronto': 1, }, coord: { lat: 43.6439659, lng: -79.3886512 } },
+      { city: 'San Francisco', projectNames: { 'DIALOG San Francisco': 1, }, coord: { lat: 37.7948838, lng: -122.4015225 } },
+      { city: 'Edmonton', projectNames: { 'DIALOG Edmonton': 1, }, coord: { lat: 53.5430521, lng: -113.4992412 } },
+      { city: 'Vancouver', projectNames: { 'DIALOG Vancouver': 1, }, coord: { lat: 49.2839272, lng: -123.0911471 } },
+      { city: 'Calgary', projectNames: { 'DIALOG Calgary': 1, }, coord: { lat: 51.0428081, lng: -114.0608079 } },
+    ];
 
-    let currentPlace = places[Math.floor(Math.random() * (places.length))]  // Pick a random place to be spawned
-    let coordinates = currentPlace[0] // Get coordinates
-    let country = currentPlace[1].country.toLowerCase() // Get the name of the country
+    const maxScore = officeLevels.length * 2;
+    const halfScore = maxScore / 2;
+
+    const possibleLevels = [...officeLevels];
+
+    let score = 0;
+    let gameStarted = false;
+
+    function getNewPlace() {
+      const tempIndex = Math.floor(Math.random() * (possibleLevels.length));
+      const tempPlace = possibleLevels[tempIndex];
+      possibleLevels.splice(tempIndex, 1);
+      return tempPlace;
+    }
+
+    const gameOver = () => {
+      const gameOverDiv = document.getElementById("game-over-screen");
+      const finalScoreDiv = document.getElementById("finalScore");
+      finalScoreDiv.innerHTML = "Final Score: " + score;
+      const emojiDiv = document.getElementById("finalScoreEmoji");
+      emojiDiv.innerHTML = score === maxScore ? "😻" : (score >= halfScore ? "😸" : "😿");
+      gameOverDiv.style.display = "flex";
+    }
 
     // Reload game environment when a round is over
     let reconfigure = () => {
       document.getElementById("score").innerHTML = "Your current score is: " + score
-      currentPlace = places[Math.floor(Math.random() * (places.length))]
-      coordinates = currentPlace[0]
-      country = currentPlace[1].country
-
-      initialize()
+      currentPlace = getNewPlace();
+      if (!currentPlace) {//we're done!
+        gameOver();
+      } else {
+        initializeStreetView();
+      }
     }
 
     // Check if guess is correct and then execute reconfiguring function
     const guess = () => {
-      var guess = window.prompt("Which project is this? ")
+      var guess = window.prompt("Which project is this (2pts) or which municipality is it in (1pt)?");
       console.log(guess);
-      console.log(country)
-      if (guess.toLowerCase() === country) {
-        score++
-        alert("Correct! Current Score: " + score)
+      if (currentPlace.projectNames[guess]) {
+        score++;
+        score++;
+        alert("Got the project! +2! Your Score: " + score);
+        reconfigure()
+      } else if (currentPlace.city.trim().replaceAll(' ','').toLowerCase() === guess.trim().replaceAll(' ','').toLowerCase()) {
+        score++;
+        alert("Got the city! +1! Your Score: " + score);
         reconfigure()
       } else {
-        score = 0
         alert("Incorrect! Current Score: " + score)
-        reconfigure()
+        reconfigure();
       }
     }
 
+    let currentPlace = getNewPlace(); // Pick a random place to be spawned
+    initializeStreetView();
+
+
+
+
+
     // Set and configure streetview 
-    function initialize() {
+    function initializeStreetView() {
       panorama = new google.maps.StreetViewPanorama(
         document.getElementById("street-view"),
         {
           addressControl: false,
-          position: coordinates,
+          position: currentPlace.coord,
           pov: { heading: 165, pitch: 0 },
           zoom: 1,
           showRoadLabels: false,
         }
       )
     }
+
+
   </script>
 </head>
 
@@ -131,16 +552,20 @@
     <img src="./logo.webp" alt="icon" width="250px">
     <h1> If you know which project we're at, make a guess!</h1>
     <h2 id="score">Let's Go!</h2>
-    <button onclick="guess()">Guess</button>
+    <button id="guessButton" onclick="guess()">Guess</button>
   </div>
-  <div id="street-view-cover">
+  <div id="game-over-screen">
+    <h1>Game Over!</h1>
+    <h1 id="finalScoreEmoji">😻</h1>
+    <h2 id="finalScore">Final Score:</h2>
+    <button id="playAgain" onclick="window.location.reload()">Play Again?</button>
   </div>
   <!-- Street view -->
   <div id="street-view"></div>
 
   <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
   <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPTqoaP__qjo2lvllwhmfUVIuNVEyiLuY&callback=initialize&libraries=&v=weekly"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPTqoaP__qjo2lvllwhmfUVIuNVEyiLuY&callback=initializeStreetView&libraries=&v=weekly"
     async></script>
 </body>
 
