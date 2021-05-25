@@ -9,6 +9,7 @@
   <link rel="mask-icon" href="safari-pinned-tab.svg" color="#ffc82f">
   <meta name="msapplication-TileColor" content="#ffc82f">
   <meta name="theme-color" content="#ffc82f">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
   <title>Where's DIALOG?</title>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
   <style type="text/css">
@@ -405,10 +406,7 @@
       height: 25px;
     }
 
-    #guessButton {
-      color: white;
-      background-color: red;
-    }
+    #guessButton {}
 
     img {
       /* padding-top: 10px; */
@@ -420,6 +418,19 @@
         We can go around this by adding a counter invert filter on top of the street view */
       /* filter: invert(1);   */
       z-index: 1;
+    }
+
+    #ui-background {
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0);
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      z-index: 5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     #game-over-screen {
@@ -440,24 +451,25 @@
 
     #floating-panel {
       position: absolute;
-      top: 10px;
-      left: 10px;
       z-index: 5;
       background-color: rgba(255, 255, 255, 0.507);
-      padding: 15px;
       border: 1px solid #999;
       border-radius: 5px;
       text-align: center;
       font-family: "Roboto", "sans-serif";
-      line-height: 30px;
-      padding-left: 10px;
-      width: 420px;
-      height: 259px;
+
+      top: 0px;
+      padding: 15px;
+      width: 80%;
+
       z-index: 100;
     }
 
-    #floating-panel {
-      margin-left: 0px;
+    @media (min-width: 420px) {
+      #floating-panel {
+        width: 420px;
+        margin-top: 15px;
+      }
     }
   </style>
   <script>
@@ -518,6 +530,7 @@
     // Reload game environment when a round is over
     let reconfigure = () => {
       document.getElementById("score").innerHTML = "Your current score is: " + score
+      document.getElementById("guessButton").innerHTML = "Guess";
       currentPlace = getNewPlace();
       if (!currentPlace) {//we're done!
         gameOver();
@@ -572,24 +585,26 @@
 
 <body>
   <!-- The guess panel on top of the street view -->
-  <div id="floating-panel">
-    <img src="./logo.webp" alt="icon" width="250px">
-    <h1> If you know which project we're at, make a guess!</h1>
-    <h2 id="score">Let's Go!</h2>
-    <button id="guessButton" onclick="guess()">Guess</button>
+  <div id="ui-background">
+    <div id="floating-panel">
+      <img src="./logo.webp" alt="icon" width="250px">
+      <h2 id="score">Guess the project name or city!</h2>
+      <button id="guessButton" onclick="guess()">Start!</button>
+    </div>
+    <div id="game-over-screen">
+      <h1>Game Over!</h1>
+      <h1 id="finalScoreEmoji">😻</h1>
+      <h2 id="finalScore">Final Score:</h2>
+      <button id="playAgain" onclick="window.location.reload()">Play Again?</button>
+    </div>
   </div>
-  <div id="game-over-screen">
-    <h1>Game Over!</h1>
-    <h1 id="finalScoreEmoji">😻</h1>
-    <h2 id="finalScore">Final Score:</h2>
-    <button id="playAgain" onclick="window.location.reload()">Play Again?</button>
-  </div>
+
   <!-- Street view -->
   <div id="street-view"></div>
 
   <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
   <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPTqoaP__qjo2lvllwhmfUVIuNVEyiLuY&callback=initializeStreetView&libraries=&v=weekly"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-9q-zYpiLoKSoy5KOSKwefqEOENaNRg4&callback=initializeStreetView&libraries=&v=weekly"
     async></script>
 </body>
 
