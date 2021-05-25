@@ -467,11 +467,11 @@
 
     // Set different places where the player will be spawned
     const officeLevels = [
-      { city: 'Toronto', projectNames: { 'DIALOG Toronto': 1, }, coord: { lat: 43.6439659, lng: -79.3886512 } },
-      { city: 'San Francisco', projectNames: { 'DIALOG San Francisco': 1, }, coord: { lat: 37.7948838, lng: -122.4015225 } },
-      { city: 'Edmonton', projectNames: { 'DIALOG Edmonton': 1, }, coord: { lat: 53.5430521, lng: -113.4992412 } },
-      { city: 'Vancouver', projectNames: { 'DIALOG Vancouver': 1, }, coord: { lat: 49.2839272, lng: -123.0911471 } },
-      { city: 'Calgary', projectNames: { 'DIALOG Calgary': 1, }, coord: { lat: 51.0428081, lng: -114.0608079 } },
+      { city: 'Toronto', projectNames: ['DIALOG Toronto', 'dlg toronto', 'toronto office'], coord: { lat: 43.6439659, lng: -79.3886512 } },
+      { city: 'San Francisco', projectNames: ['DIALOG San Francisco', 'dlg San Francisco', 'San Francisco office'], coord: { lat: 37.7948838, lng: -122.4015225 } },
+      { city: 'Edmonton', projectNames: ['DIALOG Edmonton', 'dlg Edmonton', 'Edmonton office'], coord: { lat: 53.5430521, lng: -113.4992412 } },
+      { city: 'Vancouver', projectNames: ['DIALOG Vancouver', 'dlg Vancouver', 'Vancouver office'], coord: { lat: 49.2839272, lng: -123.0911471 } },
+      { city: 'Calgary', projectNames: ['DIALOG Calgary', 'dlg Calgary', 'Calgary office'], coord: { lat: 51.0428081, lng: -114.0608079 } },
     ];
 
     const maxScore = officeLevels.length * 2;
@@ -487,6 +487,20 @@
       const tempPlace = possibleLevels[tempIndex];
       possibleLevels.splice(tempIndex, 1);
       return tempPlace;
+    }
+
+    function softenString(inputString) {
+      return inputString.trim().replaceAll(' ', '').toLowerCase();
+    }
+
+    function stringInList(inputString, stringList){
+      const softedInput = softenString(inputString);
+      stringList.forEach(listStr => {
+        if(softenString === softenString(listStr)){
+          return true;
+        }
+      });
+      return false;
     }
 
     const gameOver = () => {
@@ -513,12 +527,12 @@
     const guess = () => {
       var guess = window.prompt("Which project is this (2pts) or which municipality is it in (1pt)?");
       console.log(guess);
-      if (currentPlace.projectNames[guess]) {
+      if (stringInList(guess,currentPlace.projectNames)) {
         score++;
         score++;
         alert("Got the project! +2! Your Score: " + score);
         reconfigure()
-      } else if (currentPlace.city.trim().replaceAll(' ', '').toLowerCase() === guess.trim().replaceAll(' ', '').toLowerCase()) {
+      } else if (softenString(currentPlace.city) === softenString(guess)) {
         score++;
         alert("Got the city! +1! Your Score: " + score);
         reconfigure()
