@@ -493,13 +493,16 @@
       return inputString.trim().replaceAll(' ', '').toLowerCase();
     }
 
-    function stringInList(inputString, stringList){
+    function stringInList(inputString, stringList) {
       const softedInput = softenString(inputString);
-      stringList.forEach(listStr => {
-        if(softenString === softenString(listStr)){
+      console.log(softedInput);
+      for (let i = 0; i < stringList.length; i++) {
+        const listStr = stringList[i];
+        console.log(softenString(listStr));
+        if (softedInput === softenString(listStr)) {
           return true;
         }
-      });
+      }
       return false;
     }
 
@@ -527,7 +530,7 @@
     const guess = () => {
       var guess = window.prompt("Which project is this (2pts) or which municipality is it in (1pt)?");
       console.log(guess);
-      if (stringInList(guess,currentPlace.projectNames)) {
+      if (stringInList(guess, currentPlace.projectNames)) {
         score++;
         score++;
         alert("Got the project! +2! Your Score: " + score);
@@ -586,7 +589,7 @@
 
   <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
   <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPTqoaP__qjo2lvllwhmfUVIuNVEyiLuY&callback=initializeStreetView&libraries=&v=weekly"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsPzuHDAgA6M2Zi_pybfj-RP6oNOttMPY&callback=initializeStreetView&libraries=&v=weekly"
     async></script>
 </body>
 
