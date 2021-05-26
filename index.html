@@ -119,7 +119,7 @@
   <script src="papaparse.min.js"></script>
   <script src="konami.js"></script>
   <script>
-    console.log("Where's DIALOG? - A game by DevHub");
+    console.log("Where's DIALOG? - A game by Krigh Bachmann & Jason Masters");
     console.log('**');
     console.log('*******');
     console.log('**************');
@@ -188,20 +188,21 @@
         },
         "projectNames": [
           "Calgary Cancer Centre",
-          " calgary cancer",
-          ""
+          "calgary cancer center",
+          "calgary cancer"
         ]
       },
       {
         "city": "Edmonton",
-        "name": "Walterdale Bridge",
+        "name": "Walterdale Bridge Or Rossdale Power Plant",
         "coord": {
           "lat": 53.5293284,
           "lng": -113.5012548
         },
         "projectNames": [
           "Walterdale Bridge",
-          " walterdale"
+          "walterdale",
+          "rossdale"
         ]
       },
       {
@@ -224,8 +225,8 @@
         },
         "projectNames": [
           "University of Calgary",
-          " Energy Environment Experiential Learning",
-          "  EEEL"
+          "Energy Environment Experiential Learning",
+          " EEEL"
         ]
       },
       {
@@ -248,7 +249,7 @@
         },
         "projectNames": [
           "Brookfield Place",
-          " brookfield"
+          "brookfield"
         ]
       },
       {
@@ -260,7 +261,7 @@
         },
         "projectNames": [
           "Bayview Village",
-          " "
+          "bayview"
         ]
       },
       {
@@ -271,21 +272,22 @@
           "lng": -113.4826481
         },
         "projectNames": [
-          "Kinistinaw Park"
+          "Kinistinaw Park",
+          "kinistinaw"
         ]
       },
       {
         "city": "Calgary",
         "name": "University of Calgary Mackimmie, Complex and Professional Faculties Redevelopment",
         "coord": {
-          "lat": 51.0769764,
-          "lng": -114.1288031
+          "lat": 51.0764028,
+          "lng": -114.128403
         },
         "projectNames": [
           "University of Calgary",
           "Mackimmie",
-          " uofc",
-          " uofc mackimmie"
+          "uofc",
+          "uofc mackimmie"
         ]
       },
       {
@@ -296,7 +298,9 @@
           "lng": -113.4429037
         },
         "projectNames": [
-          "Valleyline LRT project"
+          "Valleyline LRT project",
+          "valleyline",
+          "valleyline lrt"
         ]
       },
       {
@@ -307,7 +311,8 @@
           "lng": -63.5469537
         },
         "projectNames": [
-          "Dartmouth Hospital"
+          "Dartmouth Hospital",
+          "dartmouth"
         ]
       },
       {
@@ -319,7 +324,7 @@
         },
         "projectNames": [
           "JW Marriott",
-          " ICE District"
+          "ICE District"
         ]
       },
       {
@@ -353,9 +358,8 @@
         },
         "projectNames": [
           "University of Ontario",
-          " Software Informatics and Research Centre",
-          " SIRC",
-          ""
+          "Software Informatics and Research Centre",
+          "SIRC"
         ]
       },
       {
@@ -367,6 +371,21 @@
         },
         "projectNames": [
           "The Emblem"
+        ]
+      },
+      {
+        "city": "Toronto",
+        "name": "University of Toronto Student Commons",
+        "coord": {
+          "lat": 43.6584049,
+          "lng": -79.3975861
+        },
+        "projectNames": [
+          "University of Toronto Student Commons",
+          "UofT Student Commons",
+          "student commons",
+          "uoft student union",
+          "university of toronto student union"
         ]
       },
       {
@@ -389,7 +408,9 @@
         },
         "projectNames": [
           "Edmonton Airport",
-          " Control Tower"
+          "Control Tower",
+          "edmonton airport office and control tower",
+          "edmonton airport office & control tower"
         ]
       },
       {
@@ -413,7 +434,7 @@
         "projectNames": [
           "University of British Columbia",
           "University of BC",
-          " Student Union Building"
+          "Student Union Building"
         ]
       },
       {
@@ -425,7 +446,9 @@
         },
         "projectNames": [
           "Mechanized River Valley Access",
-          " Funicular"
+          "Funicular",
+          "river valley",
+          "river valley access"
         ]
       },
       {
@@ -436,7 +459,8 @@
           "lng": -113.5065494
         },
         "projectNames": [
-          "Norquest College "
+          "Norquest College",
+          "norquest"
         ]
       },
       {
@@ -447,7 +471,8 @@
           "lng": -123.1163406
         },
         "projectNames": [
-          "Oakridge LRT"
+          "Oakridge LRT",
+          "oakridge"
         ]
       },
       {
@@ -458,21 +483,28 @@
           "lng": -90.0131413
         },
         "projectNames": [
-          "Crosstown Concourse"
+          "Crosstown Concourse",
+          "crosstown"
         ]
       },
       {
         "city": "Brampton",
-        "name": "Bramalea RBC Branch",
+        "name": "RBC Bramalea & Sandalwood",
         "coord": {
           "lat": 43.7549778,
           "lng": -79.7584096
         },
         "projectNames": [
-          "Bramalea RBC"
+          "RBC Bramalea & Sandalwood",
+          "rbc bramalea",
+          "rbc sandalwood",
+          "bramalea and sandalwood",
+          "bramalea & sandalwood",
+          "rbc bramalea and sandalwood"
         ]
       }
     ];
+
     const maxScore = officeLevels.length * 2;
     const halfScore = maxScore / 2;
 
@@ -497,10 +529,8 @@
 
     function stringInList(inputString, stringList) {
       const softedInput = softenString(inputString);
-      console.log(softedInput);
       for (let i = 0; i < stringList.length; i++) {
         const listStr = stringList[i];
-        console.log(softenString(listStr));
         if (softedInput === softenString(listStr)) {
           return true;
         }
@@ -531,7 +561,6 @@
     // Check if guess is correct and then execute reconfiguring function
     const guess = () => {
       var guess = window.prompt("Which project is this (2pts) or which municipality is it in (1pt)?");
-      console.log(guess);
       if (stringInList(guess, currentPlace.projectNames)) {
         score++;
         score++;
@@ -588,12 +617,9 @@
           skipEmptyLines: true,
         };
         var jsonObject = Papa.parse(str, config).data;
-        var jsonString = JSON.stringify(jsonObject);
-        var jsonStringFormatted = jsonString.replace(/{/g, "\n\t{").replace("]", "\n]");
         const customLevelset = [];
 
         jsonObject.forEach(row => {
-          console.log(row);
           const level = {
             city: row.city,
             name: row.name,
@@ -603,7 +629,9 @@
             lat: parseFloat(coordArr[0]),
             lng: parseFloat(coordArr[1]),
           };
-          level.projectNames = row?.projectNames?.split(',');
+
+          level.projectNames = row?.projectNames?.split(',').filter(i => i);//split and filter out blanks
+
           let err = false;
           if (!level.city) {
             console.error("row skipped as it doesn't contain " + "city");
