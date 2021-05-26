@@ -12,387 +12,7 @@
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <title>Where's DIALOG?</title>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-  <style type="text/css">
-    /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
-    /* Document
-   ========================================================================== */
-
-    /**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
-
-    html {
-      line-height: 1.15;
-      /* 1 */
-      -webkit-text-size-adjust: 100%;
-      /* 2 */
-    }
-
-    /* Sections
-     ========================================================================== */
-
-    /**
-   * Remove the margin in all browsers.
-   */
-
-    body {
-      margin: 0;
-    }
-
-    /**
-   * Render the `main` element consistently in IE.
-   */
-
-    main {
-      display: block;
-    }
-
-    /**
-   * Correct the font size and margin on `h1` elements within `section` and
-   * `article` contexts in Chrome, Firefox, and Safari.
-   */
-
-    h1 {
-      font-size: 2em;
-      margin: 0.67em 0;
-    }
-
-    /* Grouping content
-     ========================================================================== */
-
-    /**
-   * 1. Add the correct box sizing in Firefox.
-   * 2. Show the overflow in Edge and IE.
-   */
-
-    hr {
-      box-sizing: content-box;
-      /* 1 */
-      height: 0;
-      /* 1 */
-      overflow: visible;
-      /* 2 */
-    }
-
-    /**
-   * 1. Correct the inheritance and scaling of font size in all browsers.
-   * 2. Correct the odd `em` font sizing in all browsers.
-   */
-
-    pre {
-      font-family: monospace, monospace;
-      /* 1 */
-      font-size: 1em;
-      /* 2 */
-    }
-
-    /* Text-level semantics
-     ========================================================================== */
-
-    /**
-   * Remove the gray background on active links in IE 10.
-   */
-
-    a {
-      background-color: transparent;
-    }
-
-    /**
-   * 1. Remove the bottom border in Chrome 57-
-   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
-   */
-
-    abbr[title] {
-      border-bottom: none;
-      /* 1 */
-      text-decoration: underline;
-      /* 2 */
-      text-decoration: underline dotted;
-      /* 2 */
-    }
-
-    /**
-   * Add the correct font weight in Chrome, Edge, and Safari.
-   */
-
-    b,
-    strong {
-      font-weight: bolder;
-    }
-
-    /**
-   * 1. Correct the inheritance and scaling of font size in all browsers.
-   * 2. Correct the odd `em` font sizing in all browsers.
-   */
-
-    code,
-    kbd,
-    samp {
-      font-family: monospace, monospace;
-      /* 1 */
-      font-size: 1em;
-      /* 2 */
-    }
-
-    /**
-   * Add the correct font size in all browsers.
-   */
-
-    small {
-      font-size: 80%;
-    }
-
-    /**
-   * Prevent `sub` and `sup` elements from affecting the line height in
-   * all browsers.
-   */
-
-    sub,
-    sup {
-      font-size: 75%;
-      line-height: 0;
-      position: relative;
-      vertical-align: baseline;
-    }
-
-    sub {
-      bottom: -0.25em;
-    }
-
-    sup {
-      top: -0.5em;
-    }
-
-    /* Embedded content
-     ========================================================================== */
-
-    /**
-   * Remove the border on images inside links in IE 10.
-   */
-
-    img {
-      border-style: none;
-    }
-
-    /* Forms
-     ========================================================================== */
-
-    /**
-   * 1. Change the font styles in all browsers.
-   * 2. Remove the margin in Firefox and Safari.
-   */
-
-    button,
-    input,
-    optgroup,
-    select,
-    textarea {
-      font-family: inherit;
-      /* 1 */
-      font-size: 100%;
-      /* 1 */
-      line-height: 1.15;
-      /* 1 */
-      margin: 0;
-      /* 2 */
-    }
-
-    /**
-   * Show the overflow in IE.
-   * 1. Show the overflow in Edge.
-   */
-
-    button,
-    input {
-      /* 1 */
-      overflow: visible;
-    }
-
-    /**
-   * Remove the inheritance of text transform in Edge, Firefox, and IE.
-   * 1. Remove the inheritance of text transform in Firefox.
-   */
-
-    button,
-    select {
-      /* 1 */
-      text-transform: none;
-    }
-
-    /**
-   * Correct the inability to style clickable types in iOS and Safari.
-   */
-
-    button,
-    [type="button"],
-    [type="reset"],
-    [type="submit"] {
-      -webkit-appearance: button;
-    }
-
-    /**
-   * Remove the inner border and padding in Firefox.
-   */
-
-    button::-moz-focus-inner,
-    [type="button"]::-moz-focus-inner,
-    [type="reset"]::-moz-focus-inner,
-    [type="submit"]::-moz-focus-inner {
-      border-style: none;
-      padding: 0;
-    }
-
-    /**
-   * Restore the focus styles unset by the previous rule.
-   */
-
-    button:-moz-focusring,
-    [type="button"]:-moz-focusring,
-    [type="reset"]:-moz-focusring,
-    [type="submit"]:-moz-focusring {
-      outline: 1px dotted ButtonText;
-    }
-
-    /**
-   * Correct the padding in Firefox.
-   */
-
-    fieldset {
-      padding: 0.35em 0.75em 0.625em;
-    }
-
-    /**
-   * 1. Correct the text wrapping in Edge and IE.
-   * 2. Correct the color inheritance from `fieldset` elements in IE.
-   * 3. Remove the padding so developers are not caught out when they zero out
-   *    `fieldset` elements in all browsers.
-   */
-
-    legend {
-      box-sizing: border-box;
-      /* 1 */
-      color: inherit;
-      /* 2 */
-      display: table;
-      /* 1 */
-      max-width: 100%;
-      /* 1 */
-      padding: 0;
-      /* 3 */
-      white-space: normal;
-      /* 1 */
-    }
-
-    /**
-   * Add the correct vertical alignment in Chrome, Firefox, and Opera.
-   */
-
-    progress {
-      vertical-align: baseline;
-    }
-
-    /**
-   * Remove the default vertical scrollbar in IE 10+.
-   */
-
-    textarea {
-      overflow: auto;
-    }
-
-    /**
-   * 1. Add the correct box sizing in IE 10.
-   * 2. Remove the padding in IE 10.
-   */
-
-    [type="checkbox"],
-    [type="radio"] {
-      box-sizing: border-box;
-      /* 1 */
-      padding: 0;
-      /* 2 */
-    }
-
-    /**
-   * Correct the cursor style of increment and decrement buttons in Chrome.
-   */
-
-    [type="number"]::-webkit-inner-spin-button,
-    [type="number"]::-webkit-outer-spin-button {
-      height: auto;
-    }
-
-    /**
-   * 1. Correct the odd appearance in Chrome and Safari.
-   * 2. Correct the outline style in Safari.
-   */
-
-    [type="search"] {
-      -webkit-appearance: textfield;
-      /* 1 */
-      outline-offset: -2px;
-      /* 2 */
-    }
-
-    /**
-   * Remove the inner padding in Chrome and Safari on macOS.
-   */
-
-    [type="search"]::-webkit-search-decoration {
-      -webkit-appearance: none;
-    }
-
-    /**
-   * 1. Correct the inability to style clickable types in iOS and Safari.
-   * 2. Change font properties to `inherit` in Safari.
-   */
-
-    ::-webkit-file-upload-button {
-      -webkit-appearance: button;
-      /* 1 */
-      font: inherit;
-      /* 2 */
-    }
-
-    /* Interactive
-     ========================================================================== */
-
-    /*
-   * Add the correct display in Edge, IE 10+, and Firefox.
-   */
-
-    details {
-      display: block;
-    }
-
-    /*
-   * Add the correct display in all browsers.
-   */
-
-    summary {
-      display: list-item;
-    }
-
-    /* Misc
-     ========================================================================== */
-
-    /**
-   * Add the correct display in IE 10+.
-   */
-
-    template {
-      display: none;
-    }
-
-    /**
-   * Add the correct display in IE 10.
-   */
-
-    [hidden] {
-      display: none;
-    }
-  </style>
   <style type="text/css">
     html,
     body {
@@ -406,18 +26,16 @@
       height: 25px;
     }
 
-    #guessButton {}
-
-    img {
-      /* padding-top: 10px; */
-    }
-
     #street-view {
       height: 100%;
       /* Google inverts the colours if you don't have any billing set up.
         We can go around this by adding a counter invert filter on top of the street view */
       /* filter: invert(1);   */
       z-index: 1;
+    }
+
+    #guess-button {
+      display: none;
     }
 
     #ui-background {
@@ -435,7 +53,7 @@
     }
 
     #game-over-screen {
-      pointer-events:all;
+      pointer-events: all;
       position: absolute;
       top: 0px;
       left: 0px;
@@ -452,8 +70,7 @@
     }
 
     #floating-panel {
-      pointer-events:all;
-      position: absolute;
+      pointer-events: all;
       z-index: 5;
       background-color: rgba(255, 255, 255, 0.507);
       border: 1px solid #999;
@@ -461,11 +78,30 @@
       text-align: center;
       font-family: "Roboto", "sans-serif";
 
-      top: 0px;
       padding: 15px;
+      margin: 15px;
       width: 80%;
 
       z-index: 100;
+    }
+
+    #upload-panel {
+      pointer-events: all;
+      z-index: 5;
+      background-color: #ffffff81;
+      border: 1px solid #999;
+      border-radius: 5px;
+      text-align: center;
+      font-family: "Roboto", "sans-serif";
+      padding: 15px;
+      width: 80%;
+      min-height: 126.5px;
+      z-index: 100;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: larger;
     }
 
     @media (min-width: 420px) {
@@ -473,32 +109,172 @@
         width: 420px;
         margin-top: 15px;
       }
+
+      #upload-panel {
+        width: 420px;
+      }
     }
   </style>
+  <script src="filedrop-min.js"></script>
+  <script src="papaparse.min.js"></script>
+  <script src="konami.js"></script>
   <script>
-    // Set the starting score of the player to 0
+    console.log("Where's DIALOG? - A game by DevHub");
+    console.log('**');
+    console.log('*******');
+    console.log('**************');
+    console.log('Much thanks to William Tuominiemi and his helpful Youtube tutorial and starting repo: https://github.com/WilliamTuominiemi/GeoGuessr-Clone');
+    console.log('**************');
+    console.log('*******');
+    console.log('**');
+  </script>
+
+</head>
+
+<body>
+  <!-- The guess panel on top of the street view -->
+  <div id="ui-background">
+    <div id="floating-panel">
+      <img src="./logo.webp" alt="icon" width="160px">
+      <h2 id="score">Guess the project name or city!</h2>
+      <select name="levelset" id="levelset">
+        <option value="demo">Demo (DLG Offices)</option>
+        <option value="tgit">TGIT</option>
+      </select>
+      <button name="start" id="start-button" onclick="startGame()">Start!</button>
+      <button name="guess" id="guess-button" onclick="guess()">Guess</button>
+    </div>
+    <div id="upload-panel">
+      😈
+    </div>
+    <div id="game-over-screen">
+      <h1>Game Over!</h1>
+      <h1 id="finalScoreEmoji">😻</h1>
+      <h2 id="finalScore">Final Score:</h2>
+      <button id="playAgain" onclick="window.location.reload()">Play Again?</button>
+    </div>
+  </div>
+
+  <!-- Street view -->
+  <div id="street-view"></div>
+
+  <script>
+
+
 
     let panorama;
 
     // Set different places where the player will be spawned
     const officeLevels = [
-      { city: 'Toronto', projectNames: ['DIALOG Toronto', 'dlg toronto', 'toronto office'], coord: { lat: 43.6439659, lng: -79.3886512 } },
-      { city: 'San Francisco', projectNames: ['DIALOG San Francisco', 'dlg San Francisco', 'San Francisco office'], coord: { lat: 37.7948838, lng: -122.4015225 } },
-      { city: 'Edmonton', projectNames: ['DIALOG Edmonton', 'dlg Edmonton', 'Edmonton office'], coord: { lat: 53.5430521, lng: -113.4992412 } },
-      { city: 'Vancouver', projectNames: ['DIALOG Vancouver', 'dlg Vancouver', 'Vancouver office'], coord: { lat: 49.2839272, lng: -123.0911471 } },
-      { city: 'Calgary', projectNames: ['DIALOG Calgary', 'dlg Calgary', 'Calgary office'], coord: { lat: 51.0428081, lng: -114.0608079 } },
+      { city: 'Toronto', name: "DIALOG Toronto", projectNames: ['DIALOG Toronto', 'dlg toronto', 'toronto office'], coord: { lat: 43.6439659, lng: -79.3886512 } },
+      { city: 'San Francisco', name: "DIALOG San Francisco", projectNames: ['DIALOG San Francisco', 'dlg San Francisco', 'San Francisco office'], coord: { lat: 37.7948838, lng: -122.4015225 } },
+      { city: 'Edmonton', name: "DIALOG Edmonton", projectNames: ['DIALOG Edmonton', 'dlg Edmonton', 'Edmonton office'], coord: { lat: 53.5430521, lng: -113.4992412 } },
+      { city: 'Vancouver', name: "DIALOG Vancouver", projectNames: ['DIALOG Vancouver', 'dlg Vancouver', 'Vancouver office'], coord: { lat: 49.2839272, lng: -123.0911471 } },
+      { city: 'Calgary', name: "DIALOG Calgary", projectNames: ['DIALOG Calgary', 'dlg Calgary', 'Calgary office'], coord: { lat: 51.0428081, lng: -114.0608079 } },
     ];
 
+
+    new Konami(() => {
+      document.getElementById("upload-panel").style.display = "flex";
+    });
+
+    const tgitLevels = [
+      {
+        "PICKED": "X",
+        "difficulty": "Easy",
+        "name": "Walterdale Bridge",
+        "projectNames": [
+          "Walterdale Bridge",
+          "walterdale"
+        ],
+        "Status": "Complete",
+        "city": "Edmonton",
+        "coord": {
+          "lat": 53.5293284,
+          "lng": -113.5012548
+        },
+        "Comments": "",
+        "Google Map location": "https://www.google.ca/maps/@53.5293284,-113.5012548,3a,75y,34.3h,105.6t/data=!3m7!1e1!3m5!1s50XDmVN0TKaeqVwvBODwxA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3D50XDmVN0TKaeqVwvBODwxA%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D229.63919%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656"
+      },
+      {
+        "PICKED": "X",
+        "difficulty": "Easy",
+        "name": "Vancouver House",
+        "projectNames": [
+          "Vancouver House"
+        ],
+        "Status": "Complete",
+        "city": "Vancouver",
+        "coord": {
+          "lat": 49.2747932,
+          "lng": -123.1305255
+        },
+        "Comments": "",
+        "Google Map location": "https://www.google.ca/maps/@49.2747932,-123.1305255,3a,75y,32.08h,86.95t/data=!3m7!1e1!3m5!1s7LrgfZsZxi4FnKitSvPk5Q!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3D7LrgfZsZxi4FnKitSvPk5Q%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D14.090883%26pitch%3D0%26thumbfov%3D100!7i16384!8i8192"
+      },
+      {
+        "PICKED": "X",
+        "difficulty": "Easy",
+        "name": "Calgary Cancer Centre",
+        "projectNames": [
+          "Calgary Cancer Centre",
+          "calgary cancer"
+        ],
+        "Status": "Construction",
+        "city": "Calgary",
+        "coord": {
+          "lat": 51.0664257,
+          "lng": -114.1291979
+        },
+        "Comments": "",
+        "Google Map location": "https://www.google.ca/maps/@51.0664257,-114.1291979,3a,75y,305.67h,104.1t/data=!3m6!1e1!3m4!1sWFvh6dli6I1WBEO5hCFa4A!2e0!7i16384!8i8192"
+      },
+      {
+        "PICKED": "X",
+        "difficulty": "",
+        "name": "Crosstown Concourse",
+        "projectNames": [
+          "Crosstown Concourse"
+        ],
+        "Status": "Complete",
+        "city": "Memphis",
+        "coord": {
+          "lat": 35.1522148,
+          "lng": -90.0127416
+        },
+        "Comments": "The Name is on the building",
+        "Google Map location": "https://www.google.ca/maps/@35.1522148,-90.0127416,3a,75y,273.44h,109.49t/data=!3m6!1e1!3m4!1sSFn4jdLSkp-rjP9uiG5dMg!2e0!7i16384!8i8192"
+      },
+      {
+        "PICKED": "X",
+        "difficulty": "Hard",
+        "name": "kinistinaw park",
+        "projectNames": [
+          "kinistinaw park"
+        ],
+        "Status": "Constructed",
+        "city": "Edmonton",
+        "coord": {
+          "lat": 53.5457551,
+          "lng": -113.4826481
+        },
+        "Comments": "",
+        "Google Map location": "Kinistinâw Park - Google Maps"
+      }
+    ]
     const maxScore = officeLevels.length * 2;
     const halfScore = maxScore / 2;
 
-    const possibleLevels = [...officeLevels];
+    let possibleLevels = [...tgitLevels];
 
+    // Set the starting score of the player to 0
     let score = 0;
     let gameStarted = false;
 
+    let randomMode = false;
+
     function getNewPlace() {
-      const tempIndex = Math.floor(Math.random() * (possibleLevels.length));
+      const tempIndex = !randomMode ? 0 : Math.floor(Math.random() * (possibleLevels.length));
       const tempPlace = possibleLevels[tempIndex];
       possibleLevels.splice(tempIndex, 1);
       return tempPlace;
@@ -533,7 +309,6 @@
     // Reload game environment when a round is over
     let reconfigure = () => {
       document.getElementById("score").innerHTML = "Your current score is: " + score
-      document.getElementById("guessButton").innerHTML = "Guess";
       currentPlace = getNewPlace();
       if (!currentPlace) {//we're done!
         gameOver();
@@ -561,11 +336,97 @@
       }
     }
 
+    const startGame = () => {
+
+      const levelset = document.getElementById("levelset").value;
+      if (levelset === 'demo') {
+        _startGame(officeLevels);
+      } else if (levelset === 'tgit') {
+        _startGame(tgitLevels);
+      }
+    }
+
+    const _startGame = (levelset) => {
+      document.getElementById("guess-button").style.display = "inline-block";
+      document.getElementById("start-button").style.display = "none";
+      document.getElementById("upload-panel").style.display = "none";
+      document.getElementById("levelset").style.display = "none";
+      possibleLevels = [...levelset];
+      reconfigure();
+    }
+
+    function initDropzone() {
+      var options = { input: false, logging: false, };
+      var dropzone = new FileDrop('upload-panel', options);
+      // var jsonzone = document.getElementById("jsonoutput");
+
+      dropzone.event('send', function (files) {
+        files.each(function (file) {
+          file.readData(
+            createJSON,
+            function (e) { alert('Terrible error!') },
+            'text'
+          )
+        })
+      });
+
+      function createJSON(str) {
+        dropzone.el.value = str;
+        var config = {
+          header: true,
+          skipEmptyLines: true,
+        };
+        var jsonObject = Papa.parse(str, config).data;
+        var jsonString = JSON.stringify(jsonObject);
+        var jsonStringFormatted = jsonString.replace(/{/g, "\n\t{").replace("]", "\n]");
+        const customLevelset = [];
+
+        jsonObject.forEach(row => {
+          console.log(row);
+          const level = {
+            city: row.city,
+            name: row.name,
+          };
+          const coordArr = row?.coord?.split(',');
+          level.coord = {
+            lat: parseFloat(coordArr[0]),
+            lng: parseFloat(coordArr[1]),
+          };
+          level.projectNames = row?.projectNames?.split(',');
+          let err = false;
+          if (!level.city) {
+            console.error("row skipped as it doesn't contain " + "city");
+            err = true;
+          }
+          if (!level.projectNames || level.projectNames.length === 0) {
+            console.error("row skipped as it doesn't contain " + "projectNames");
+            err = true;
+          }
+          if (!level.coord.lat) {
+            console.error("row skipped as it doesn't contain " + "coord.lat");
+            err = true;
+          }
+          if (!level.coord.lng) {
+            console.error("row skipped as it doesn't contain " + "coord.lng");
+            err = true;
+          }
+          if (!level.name) {
+            console.error("row skipped as it doesn't contain " + "name");
+            err = true;
+          }
+          if (!err) {
+            customLevelset.push(level);
+          }
+        });
+
+        console.log(customLevelset);
+        _startGame(customLevelset);
+      }
+    }
+    initDropzone();
+
     let currentPlace = getNewPlace(); // Pick a random place to be spawned
     initializeStreetView();
-
-
-
 
 
     // Set and configure streetview 
@@ -584,26 +445,6 @@
 
 
   </script>
-</head>
-
-<body>
-  <!-- The guess panel on top of the street view -->
-  <div id="ui-background">
-    <div id="floating-panel">
-      <img src="./logo.webp" alt="icon" width="160px">
-      <h2 id="score">Guess the project name or city!</h2>
-      <button id="guessButton" onclick="guess()">Start!</button>
-    </div>
-    <div id="game-over-screen">
-      <h1>Game Over!</h1>
-      <h1 id="finalScoreEmoji">😻</h1>
-      <h2 id="finalScore">Final Score:</h2>
-      <button id="playAgain" onclick="window.location.reload()">Play Again?</button>
-    </div>
-  </div>
-
-  <!-- Street view -->
-  <div id="street-view"></div>
 
   <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
   <script
