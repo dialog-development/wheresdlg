@@ -520,6 +520,8 @@
 
     const maxScore = officeLevels.length * 2;
     const halfScore = maxScore / 2;
+    const quarterScore = maxScore / 4;
+
 
     let possibleLevels = [...tgitLevels];
 
@@ -556,7 +558,7 @@
       const finalScoreDiv = document.getElementById("finalScore");
       finalScoreDiv.innerHTML = "Final Score: " + score;
       const emojiDiv = document.getElementById("finalScoreEmoji");
-      emojiDiv.innerHTML = score === maxScore ? "😻" : (score >= halfScore ? "😸" : "😿");
+      emojiDiv.innerHTML = score === maxScore ? "😻😻😻" : (score >= halfScore ? "😻" :(score >=quarterScore ? "😸" : "😿"));
       gameOverDiv.style.display = "flex";
     }
 
