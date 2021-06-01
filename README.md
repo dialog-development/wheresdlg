@@ -1,4 +1,4 @@
-# Wheres DIALOG
+# Where's DIALOG
 A simple web game for guessing where you're at. 
 
 You can guess the name of a DIALOG project (2pt) or the city/ municipality you're in (1pt).
